@@ -1,0 +1,2 @@
+ffmpeg -f gdigrab -framerate 30 -i desktop -c:v libx264 -preset ultrafast -tune zerolatency -pix_fmt yuv420p -c:a aac -f flv rtmp://rtmp_server/live/stream_name
+ffplay -analyzeduration 0 -fflags nobuffer -flags low_delay -vf "scale=720:420" -i rtmp://192.168.2.52:1935/live/01
